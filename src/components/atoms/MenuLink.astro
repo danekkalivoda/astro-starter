@@ -1,0 +1,15 @@
+---
+export interface Props {
+  link: String;
+}
+const { link } = Astro.props;
+---
+<li>
+	<a
+		href={link.url}
+	>
+		<span class={"relative"}>
+			{link.title}
+		</span>
+	</a>
+</li>

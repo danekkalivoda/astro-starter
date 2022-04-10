@@ -1,0 +1,25 @@
+---
+import MenuLink from "@components/atoms/MenuLink.astro"
+export interface Props {
+    links: object
+}
+const { links } = Astro.props;
+---
+<div
+  x-show="expanded"
+  x-cloak="mobile:hidden"
+  x-collapse
+  class="w-full md:w-auto transition-all duration-150 ease-out overflow-hidden md:flex-important md:h-auto-important md:overflow-visible-important"
+>
+  <nav
+    class="flex items-stretch"
+  >
+    <ul
+      class="flex flex-col items-start w-full overflow-auto md:flex-row md:overflow-visible"
+    >
+      {links.map((link) => (
+        <MenuLink link={link}>{link.title}</MenuLink>
+      ))}
+    </ul>
+  </nav>
+</div>

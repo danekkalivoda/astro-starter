@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Custom styles here */
+
+@layer base {
+  html {
+		--scroll-behavior: smooth;
+		scroll-behavior: smooth;
+	}
+  [x-cloak="hidden"] {
+		display: none !important;
+	}
+	[x-cloak="invisible"] {
+		visibility: hidden !important;
+	}
+	[x-cloak="opaque"] {
+		opacity: 0 !important;
+	}
+	@media (max-width: 768px) {
+		[x-cloak="mobile:hidden"] {
+			display: none !important;
+		}
+	}
+	@media (min-width: 768px) {
+		[x-cloak="md:hidden"] {
+			display: none !important;
+		}
+		[x-cloak="md:opaque"] {
+			opacity: 0 !important;
+		}
+	}
+}
+@layer utilities{
+  .h-auto-important {
+    height: auto !important;
+  }
+  .overflow-visible-important {
+    overflow: visible !important;
+  }
+  .flex-important {
+    display: flex !important;
+  }
+}
+@layer components {
+
+}

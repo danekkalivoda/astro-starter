@@ -1,0 +1,30 @@
+---
+import '@assets/styles/main.css';
+
+export interface Props {
+  title?: string
+  description?: string
+  lang?: string,
+	noindex?: boolean
+}
+const defaultTitle = 'Astro Starter'
+const {title, description, lang = "cs-CZ", allowIndex = true} = Astro.props;
+---
+<html lang={lang} translate="no">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1">
+
+    <title>{defaultTitle}{title && ( ' - ' + title )}</title>
+    <meta name="description" content={description}>
+    {allowIndex ? (<meta name="robots" content="index,follow" />) : (<meta name="robots" content="noindex,nofollow" />)}
+
+    <!-- <link rel="icon" type="image/x-icon" href="/favicon.ico" /> -->
+
+    <!-- <link rel="preconnect" href=""> -->
+    <script src="@assets/js/global.js"></script>
+  </head>
+  <body>
+    <slot/>
+  </body>
+</html>

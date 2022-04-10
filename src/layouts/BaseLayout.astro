@@ -1,0 +1,12 @@
+---
+import RawLayout from '@layouts/RawLayout.astro'
+import Header from '@layouts/parts/Header.astro'
+import Footer from '@layouts/parts/Footer.astro'
+---
+<RawLayout>
+  <main>
+    <Header/>
+    <slot />
+    <Footer/>
+  </main>
+</RawLayout>
