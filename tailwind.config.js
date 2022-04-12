@@ -1,7 +1,14 @@
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+      minHeight: (theme) => ({
+        ...theme('spacing'),
+      }),
+    },
 	},
 	plugins: [],
+  corePlugins: {
+    container: false
+  }
 };

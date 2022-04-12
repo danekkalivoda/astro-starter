@@ -43,5 +43,7 @@
   }
 }
 @layer components {
-
+  .container {
+    @apply max-w-7xl px-6 mx-auto lg:px-12;
+  }
 }

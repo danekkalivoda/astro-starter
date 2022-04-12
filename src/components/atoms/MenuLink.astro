@@ -7,9 +7,8 @@ const { link } = Astro.props;
 <li>
 	<a
 		href={link.url}
+    class="flex py-2 tracking-tight text-gray-400 md:p-4 hover:text-gray-800"
 	>
-		<span class={"relative"}>
-			{link.title}
-		</span>
+    {link.title}
 	</a>
 </li>
