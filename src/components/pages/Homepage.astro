@@ -1,12 +1,14 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro'
 import { Icon } from 'astro-icon';
+import { Img } from "astro-imagetools/components";
 ---
 <BaseLayout>
   <div class="container">
     This is home of Astro Starter
     <div>
     <Icon name="smile" class="w-6 h-6 text-green-500" />
+    <Img src="https://picsum.photos/1600/900?random=1" alt="A random image" />
     </div>
   </div>
   <div class="min-h-screen"></div>
